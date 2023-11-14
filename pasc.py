@@ -29,12 +29,9 @@ def fill_in_missing_dates(df):
 
 def haversine_np(lon1, lat1, lon2, lat2):
     """
-    Calculate the great circle distance between two points
-    on the earth (specified in decimal degrees).
+    Calcula la distancia entre dos puntos de coordenadas dados en grados decimales.
     
-    All args must be of equal length.
-    
-    Tomada de 
+    Modificada del código: https://stackoverflow.com/a/19412565
     """
     lon1, lat1, lon2, lat2 = map(np.radians, [lon1, lat1, lon2, lat2])
 
@@ -111,7 +108,7 @@ def MLR(df, var):
         model.score(X, y),
         spearmanr(y, y_pred).statistic
     ])
-"""
+
 # Observaciones sin interpolar
 df = pd.read_csv("observations.csv") #*
 
@@ -122,8 +119,7 @@ interpolate(df) #*
 ## Si desea probar el resto del código sin tener que esperar la interpolación
 ## (proceso tardado), comente las líneas señaladas "#*" y en su lugar ejecute
 ## la línea siguiente (debe contar con el archivo observations_interpolated.csv)
-"""
-df = pd.read_csv("observations_interpolated.csv")
+## df = pd.read_csv("observations_interpolated.csv")
 
 # eval_metrics almacenará estadísticos de coef. de determinación y de correlación
 # para el modelo de cada variable para cada rango de años
