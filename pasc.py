@@ -116,10 +116,10 @@ df = pd.read_csv("observations.csv") #*
 fill_in_missing_dates(df) #*
 interpolate(df) #*
 
-## Si desea probar el resto del código sin tener que esperar la interpolación
-## (proceso tardado), comente las líneas señaladas "#*" y en su lugar ejecute
-## la línea siguiente (debe contar con el archivo observations_interpolated.csv)
-## df = pd.read_csv("observations_interpolated.csv")
+# Si desea probar el resto del código sin tener que esperar la interpolación
+# (proceso tardado), comente las líneas señaladas "#*" y en su lugar ejecute
+# la línea siguiente (debe contar con el archivo observations_interpolated.csv)
+# df = pd.read_csv("observations_interpolated.csv")
 
 # eval_metrics almacenará estadísticos de coef. de determinación y de correlación
 # para el modelo de cada variable para cada rango de años
